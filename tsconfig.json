@@ -20,9 +20,8 @@
         "isolatedModules": true,
         "baseUrl": ".",
         "paths": {
-            "module_hello": [ "./packages/mon_hello/src/" ],
-            "module-1": [ "./packages/mon1/src/" ],
-            "module-2": [ "./packages/mon2/src/" ],
+            "app": [ "./packages/app/src/" ],
+            "unit": [ "./packages/unit/src/" ],
         }
     },
     "include": ["src/**/**/*"],
