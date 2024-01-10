@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
     {
-        entry: "./packages/app/src/index.tsx",
+        entry: "./packages/app/messenger/src/js/view/app/index.tsx",
         mode: "development",
         target: "web",
         output: {
@@ -12,7 +12,7 @@ module.exports = [
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: "./packages/app/src/index.html",
+                template: "./packages/app/messenger/src/html/index.html",
              }),
         ],
         resolve: {
