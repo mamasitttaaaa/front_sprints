@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
     {
-        entry: "./src/client/index.tsx",
+        entry: "./packages/mon_hello/src/index.tsx",
         mode: "development",
         target: "web",
         output: {
@@ -12,7 +12,7 @@ module.exports = [
         },
         plugins: [
             new HtmlWebpackPlugin({
-                template: "./src/client/index.html",
+                template: "./packages/mon_hello/src/index.html",
              }),
         ],
         resolve: {

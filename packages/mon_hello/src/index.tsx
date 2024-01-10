@@ -1,6 +1,6 @@
 import React from "react"
 import {createRoot} from "react-dom/client"
-import App from "./packs/mon_hello/App"
+import App from "./App"
 
 const rootE1 = document.querySelector("#root")
 if(!rootE1) throw new Error("Cannot find root element with that id");
