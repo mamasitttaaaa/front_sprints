@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = [
     {
-        entry: "./packages/app/messenger/src/js/view/app/index.tsx",
+        entry: "./packages/app/messenger/src/index.ts",
         mode: "development",
         target: "web",
         output: {

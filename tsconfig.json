@@ -15,15 +15,12 @@
         "strictPropertyInitialization": true,
         "jsx": "react",
         "esModuleInterop": true,
-        "allowJs": true,
-        "checkJs": true,
-        "isolatedModules": true,
         "baseUrl": ".",
         "paths": {
             "app": [ "./packages/app/messenger/src/" ],
             "unit": [ "./packages/unit/src/" ],
         }
     },
-    "include": ["src/**/**/*"],
+    "include": ["packages/**/*"],
     "exclude": ["node_modules"]
 }
