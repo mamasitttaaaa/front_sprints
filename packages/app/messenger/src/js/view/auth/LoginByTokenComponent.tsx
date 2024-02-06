@@ -15,12 +15,15 @@ const LoginByTokenComponent: React.FC = () => {
         if (token) {
           setLoading(true);
           await authService.checkToken(token);
-          // Перенаправление на страницу выхода
-          navigate("/logout");
           console.log('Auto Login successful');
+        } else {
+          // Если токен отсутствует, перенаправляем пользователя на страницу входа
+          navigate("/login");
         }
       } catch (error) {
         console.error('Auto Login failed:', (error as Error).message);
+        // В случае ошибки автовхода, также перенаправляем пользователя на страницу входа
+        navigate("/login");
       } finally {
         setLoading(false);
       }
@@ -31,12 +34,7 @@ const LoginByTokenComponent: React.FC = () => {
 
   return (
     <div>
-      <h2>Auto Login</h2>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <p>Auto Login complete. You can render additional content here.</p>
-      )}
+      {loading && <p>Loading...</p>}
     </div>
   );
 };

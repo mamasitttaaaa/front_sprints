@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import AppContainer from './app/AppContainer';
 
 // Определение свойств приложения
@@ -9,21 +9,22 @@ interface ApplicationProps {
 
 class Application extends React.Component<ApplicationProps> {
   componentDidMount() {
+    this.start();
   }
 
   start() {
-    ReactDOM.render(<AppContainer />, this.props.rootElement);
+    const root = createRoot(this.props.rootElement);
+    root.render(<AppContainer />);
   }
 
   render() {
     return (
       <div>
         <h1>Messenger</h1>
-        <AppContainer />
+        <div id="appContainer"></div>
       </div>
     );
   }
 }
 
 export default Application;
-

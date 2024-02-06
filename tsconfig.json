@@ -21,6 +21,6 @@
             "unit": [ "./packages/unit/src/" ],
         }
     },
-    "include": ["packages/**/*"],
-    "exclude": ["node_modules"]
+    "include": ["packages/**/*.ts", "packages/**/*.tsx"],
+    "exclude": ["node_modules", "dist"]
 }

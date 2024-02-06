@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { authService } from "../../service/AuthService";
 import { useNavigate } from "react-router-dom";
-import LoginByTokenComponent from './LoginByTokenComponent';
 
 const LoginByCredentialsComponent: React.FC = () => {
   const [login, setLogin] = useState<string>('');
@@ -49,7 +48,6 @@ const LoginByCredentialsComponent: React.FC = () => {
           {loggingIn ? 'Logging in...' : 'Login'}
         </button>
       </form>
-      <LoginByTokenComponent />
     </div>
   );
 };
