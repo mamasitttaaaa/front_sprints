@@ -17,8 +17,8 @@ export class AuthServiceImpl implements AuthService {
                     'Accept': 'application/json',
                 },
                 body: JSON.stringify({
-                    login,
-                    password,
+                    "login":login,
+                    "password":password
                 }),
             });
 
@@ -51,6 +51,9 @@ export class AuthServiceImpl implements AuthService {
                     'X-Auth-Token': token,
                     'Accept': 'application/json',
                 },
+                body: JSON.stringify({
+                    'X-Auth-Token':token
+                }),
             });
 
             if (!response.ok) {
@@ -82,7 +85,7 @@ export class AuthServiceImpl implements AuthService {
                     'Accept': 'application/json',
                 },
                 body: JSON.stringify({
-                    token,
+                    'X-Auth-Token':token
                 }),
             });
 
