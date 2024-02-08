@@ -14,7 +14,7 @@ const LoginByCredentialsComponent: React.FC = () => {
     try {
       setLoggingIn(true);
       await authService.login(login, password);
-      navigate("/logout"); // Перенаправление после успешного входа
+      navigate("/logout");
     } catch (error) {
       console.error('Login failed:', (error as Error).message);
     } finally {

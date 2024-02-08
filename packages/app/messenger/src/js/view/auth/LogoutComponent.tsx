@@ -19,7 +19,6 @@ const LogoutComponent: React.FC = () => {
         await authService.logout(token);
         console.log('Logout successful');
         setLogoutSuccessful(true);
-        // Перенаправляем пользователя на другую страницу после успешного выхода
         navigate('/login');
       }
     } catch (error) {

@@ -8,9 +8,7 @@ const AppContainer: React.FC = () => {
   return (
     <Router>
       <Routes>
-        {/* Маршрут по умолчанию перенаправляет на страницу входа */}
         <Route path="/" element={<LoginByTokenComponent />} />
-        {/* Остальные маршруты */}
         <Route path="/login" element={<LoginByCredentialsComponent />} />
         <Route path="/logout" element={<LogoutComponent />} />
       </Routes>

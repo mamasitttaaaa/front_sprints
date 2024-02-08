@@ -9,7 +9,6 @@ const LoginByTokenComponent: React.FC = () => {
   useEffect(() => {
     const autoLogin = async () => {
       try {
-        // Получение токена из локального хранилища
         const token = localStorage.getItem('authToken');
 
         if (token) {
@@ -17,12 +16,10 @@ const LoginByTokenComponent: React.FC = () => {
           await authService.checkToken(token);
           console.log('Auto Login successful');
         } else {
-          // Если токен отсутствует, перенаправляем пользователя на страницу входа
           navigate("/login");
         }
       } catch (error) {
         console.error('Auto Login failed:', (error as Error).message);
-        // В случае ошибки автовхода, также перенаправляем пользователя на страницу входа
         navigate("/login");
       } finally {
         setLoading(false);
@@ -30,7 +27,7 @@ const LoginByTokenComponent: React.FC = () => {
     };
 
     autoLogin();
-  }, [navigate]); // Передаем navigate в зависимость, чтобы избежать предупреждения о неиспользуемой зависимости
+  }, [navigate]);
 
   return (
     <div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import AppContainer from './app/AppContainer';
 
-// Определение свойств приложения
 interface ApplicationProps {
   rootElement: HTMLElement;
 }

@@ -29,12 +29,10 @@ export class AuthServiceImpl implements AuthService {
             const result = await response.json();
 
             if (result.status === 'ok') {
-                // Аутентификация прошла успешно, сохраняем токен в локальное хранилище
                 localStorage.setItem('authToken', result.token);
                 console.log('Успешная аутентификация');
                 console.log('Токен:', result.token);
             } else {
-                // Обработка ошибки аутентификации
                 console.log('Ошибка аутентификации:', result.status);
             }
         } catch (error) {
@@ -63,7 +61,6 @@ export class AuthServiceImpl implements AuthService {
             const result = await response.json();
 
             if (result.status === 'ok') {
-                // Выход выполнен успешно, удаляем токен из локального хранилища
                 localStorage.removeItem('authToken');
                 console.log('Выход выполнен успешно');
             } else {
