@@ -14,7 +14,7 @@ const LoginByCredentialsComponent: React.FC = () => {
     try {
       setLoggingIn(true);
       await authService.login(login, password);
-      navigate("/logout");
+      navigate("/chatjoin");
     } catch (error) {
       console.error('Login failed:', (error as Error).message);
     } finally {

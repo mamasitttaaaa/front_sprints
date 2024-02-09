@@ -1,5 +1,5 @@
-// const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
 
 module.exports = [
     {
@@ -7,7 +7,7 @@ module.exports = [
         mode: "development",
         target: "web",
         output: {
-            // path: path.resolve(_dirname, "dist/client"),
+            path: path.resolve(__dirname, "dist/client"),
             filename: "client_bundle.js",
         },
         plugins: [
@@ -27,6 +27,9 @@ module.exports = [
                         loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+                            plugins: [
+                                ["@babel/plugin-proposal-decorators", { "legacy": true }],
+                            ],
                         },
                     },
                 },

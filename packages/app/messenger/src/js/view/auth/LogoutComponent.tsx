@@ -20,6 +20,8 @@ const LogoutComponent: React.FC = () => {
         console.log('Logout successful');
         setLogoutSuccessful(true);
         navigate('/login');
+      } else { // чисто для понимания работоспособности без сервера (удалить else)
+        navigate('/login');
       }
     } catch (error) {
       console.error('Logout failed:', (error as Error).message);

@@ -12,9 +12,16 @@ const LoginByTokenComponent: React.FC = () => {
         const token = localStorage.getItem('authToken');
 
         if (token) {
-          setLoading(true);
-          await authService.checkToken(token);
-          console.log('Auto Login successful');
+          try {
+            setLoading(true);
+            await authService.checkToken(token);
+            navigate("/chatjoin");
+          } catch (error) {
+            console.error('Auto Login failed:', (error as Error).message);
+            navigate("/login");
+          } finally {
+            setLoading(false);
+          }
         } else {
           navigate("/login");
         }
