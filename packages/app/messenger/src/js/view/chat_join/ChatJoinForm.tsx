@@ -18,7 +18,7 @@ const ChatJoinForm: React.FC<ChatJoinFormProps> = ({ onSubmit, chatJoinStore }) 
     e.preventDefault();
     chatJoinStore.setUserInfo(name, gender);
     onSubmit();
-    navigate("/logout");
+    navigate("/chat");
   };
 
   return (
