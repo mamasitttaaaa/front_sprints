@@ -1,3 +1,4 @@
+// Добавить сообщения о том, что все плохо или другие
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { observer } from 'mobx-react-lite';

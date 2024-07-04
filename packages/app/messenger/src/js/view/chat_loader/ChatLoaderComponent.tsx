@@ -1,3 +1,4 @@
+// добавить сообщения если не удалось подключиться
 import React, { useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { useNavigate } from 'react-router-dom';

@@ -16,7 +16,7 @@ const AppContainer: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ChatLoaderComponent chatJoinService={chatJoinService} chatMessageStore={chatMessageStore} />} />
+        <Route path="/" element={<LoginByCredentialsComponent />} />
         <Route path="/login" element={<LoginByCredentialsComponent />} />
         <Route path="/chatjoin" element={<ChatJoinForm onSubmit={() => {}} chatJoinStore={chatJoinStore} />} />
         <Route path="/logout" element={<LogoutComponent />} />

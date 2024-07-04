@@ -17,6 +17,7 @@ const LoginByCredentialsComponent: React.FC = () => {
       navigate("/chatjoin");
     } catch (error) {
       console.error('Login failed:', (error as Error).message);
+      // Сделать вывод сообщения пользователю
     } finally {
       setLoggingIn(false);
     }
