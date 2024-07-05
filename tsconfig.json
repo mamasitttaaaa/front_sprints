@@ -18,7 +18,6 @@
         "baseUrl": ".",
         "paths": {
             "app": [ "./packages/app/messenger/src/" ],
-            "unit": [ "./packages/unit/src/" ],
         }
     },
     "include": ["packages/**/*.ts", "packages/**/*.tsx"],
